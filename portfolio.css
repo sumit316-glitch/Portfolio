@@ -252,14 +252,7 @@
             margin-bottom: 10px;
         }
 
-        .experience-section {
-            transform: scale(1);
-            transition: transform 0.3s ease;
-        }
-        
-        .experience-section.zoomed {
-            transform: scale(1.1); 
-        }
+       
 
 
        
