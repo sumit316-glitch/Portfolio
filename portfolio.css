@@ -84,7 +84,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Cormorant', serif;
+            font-family: "Trirong", serif;
             font-size: 50px;
             margin-bottom: 0px;
     
@@ -94,8 +94,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 30px;
+            font-family: "Sofia", sans-serif;
+            font-size: 40px;
+            margin-top: -8px; 
+
           
         }
 
@@ -237,6 +239,7 @@
         
         .experience-card li {
             margin-bottom: 8px;
+            font-family: 'Tangerine', serif;
             font-size: 16px;
         }
         .skills-background {
@@ -249,15 +252,26 @@
             margin-bottom: 10px;
         }
 
+        .experience-section {
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+        
+        .experience-section.zoomed {
+            transform: scale(1.1); 
+        }
 
 
-        /* education  */
+       
+
+
+
+
         /* Education Section Styles */
 .education-section {
     display: flex;
     justify-content: end;
-    font-family: 'Trebuchet MS', sans-serif;
-
+    font-family: 'Tangerine', serif;
 
     margin-top: 40px;
     padding: 10px;
@@ -322,13 +336,27 @@
 /* skillsssss */
         .skills {
             width: 25%; 
-            font-style: italic;
+            font-family: "Sofia", sans-serif;
+            
             overflow: hidden; 
             white-space: nowrap;  
             position: relative;
             margin: auto; 
         }
+        .skill-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px; 
+            padding-left: 150px;
+        }
         
+        .killlogo {
+            width: 44px; 
+            height: 34px;
+            border-radius: 90%; 
+        }
+        
+       
         .skills h1 {
             text-align: center;
             margin-bottom: 10px;
@@ -418,3 +446,8 @@
         }
 
         
+
+        
+
+     
+    
