@@ -8,6 +8,7 @@
     <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+
     <link rel="stylesheet" href="portfolio.css">
     
 </head>
@@ -95,6 +96,12 @@
                     </div>
                 </div>
             </div>
+            <!-- right side tex word by word -->
+
+            <div class="text-container">
+                <p id="animated-text"></p>
+                <img id="animated-image" src="img/robot.jpg" alt="Robotics Enthusiast" style="display: none;">
+            </div>
         </section>
 
 
@@ -162,20 +169,33 @@
     <!-- contact me section -->
 
     <section class="contact-section" id="contact">
-        <H4 class="mind">ANY PROJECT IN MIND?</H5>
-        <h2>Let's make your</h2>
-        <h2 class="shine">Website shine</h2>
+        <h4 class="mind">ANY PROJECT IN MIND?</h4>
+
+        <h2 class="make">Let's make your</h2>
+
+        <h3 class="shine">Website shine
+            <span class="star">✧</span> 
+        </h3>
         <p>Premium web design, development to help your website stand out.</p>
+        
+
+
         <div class="contact-buttons">
-           
+            <!-- Get in Touch button -->
+            <button id="get-in-touch-btn">Get in Touch ↙</button>
         </div>
-        <div class="social-icons">
-            <a href="fb.com"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
-        </div>
+    
+        <!-- Contact details section -->
+        <div id="contact-modal" class="modal">
+            <div class="modal-content">
+                <h3>Contact Details</h3>
+                <p class="herehow">Here's how you can get in touch:</p>
+                <a href="#email" class="email-link">Email: sumit..yadav2024@nst.edu.in</a>
+                <p>Phone: +91 857783676</p>
+                <button id="close-modal-btn">Close</button>
+            </div>
     </section>
 
-    
+    <script src="portfolio.js"></script>   
 </body>
 </html>
