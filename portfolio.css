@@ -8,47 +8,77 @@
         }
         .logo{
             border-radius: 40%;
-            
         }
+
+
         .hey {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             background-color: rgba(22, 20, 20, 0.7);
             font-family: 'Trebuchet MS', sans-serif;
-
-            padding: 10px 20px; 
-            text-align: center; 
-        
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-        
+            padding: 10px 0px;
+            
             position: fixed;
-            width: 30%; 
-            max-width: 800px; 
-            height: 40px; 
-        
-            top: 0; 
-            left: 50%;
-            transform: translateX(-50%); 
-        
-            backdrop-filter: blur(4px); 
-            border-bottom: 3px solid rgba(227, 211, 190, 0.2);
+            width: 100%;
+            height: 50px;
+            top: 0;
+            margin-top: 0;
+            left: 0;
+            
+            backdrop-filter: blur(2px);
+            border-bottom: 2px solid rgba(227, 211, 190, 0.2);
             z-index: 1000;
-            border-radius: 20px; 
         }
-       
-        nav ul {
-            list-style: none;
-            padding: 0;
+        
+        /* Name section on the left */
+        .name {
+            flex: 1;
+            text-align: left;
+            margin-left: 10px;
         }
-        nav ul li {
-            display: inline;
+        .name h2 {
+            font-size: 25px; 
+            font-weight:lighter;
+            margin-bottom: 1px; 
+        }
+        
+        .name p {
+            font-size:11px;
+            color: #C3A887; 
+        }
+
+        
+        /* Center the logo */
+        .logo-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .logo {
+            width: 50px;
+            height: auto;
+            border-radius: 50%;
+        }
+        
+        /* Right-side navigation links */
+        .nav-links {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+        
+        .nav-links li {
+            display: inline-block;
             margin: 0 15px;
         }
-        nav ul li a {
+        
+        .nav-links li a {
             text-decoration: none;
             color: #E3D3BE;
         }
-
 
         /* #csguy {
             display: flex;
@@ -71,7 +101,7 @@
             display: flex;
             justify-content: center; 
             align-items: center;
-            margin: 70px auto 20px auto; 
+            margin: 150px auto 20px auto; 
         }
         
         .csguylogo {
@@ -141,13 +171,56 @@
         .work-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 100px;
+            width: 1000px;
+            margin-left: 380px;
+            margin-top: 80px;
+        }
+
+        #work{
+            margin-top: 50px;
         }
         .work-item {
             background-color: #1E1C1C;
+            font-family: 'Trebuchet MS', sans-serif;
+
+            display: flex;
+            flex-direction: column;  
+            align-items: center;     
             padding: 20px;
             text-align: center;
+            background: rgba(33, 27, 27, 0.7); 
+            backdrop-filter: blur(10px); 
+            box-shadow: 0px 4px 10px rgba(81, 26, 26, 0.5);
+
+             transition: all 0.3s ease-in-out;
+            display: inline-block;
         }
+
+    .work-item:hover,
+    .work-item:active {
+        transform: scale(1.1); /* Slightly enlarge */
+        box-shadow: 0px 4px 10px rgba(43, 37, 37, 0.2);
+        z-index: 10; /* Bring forward */}
+        
+        .expertise-header {
+            display: flex;           /* Align heading and image horizontally */
+            align-items: center;     /* Vertically center the heading and image */
+            justify-content: flex-start; /* Aligns both items at the start (left) */
+            gap: 10px;     
+            font-size: 24px;   
+            
+    
+        }
+        
+        .techpic {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+      
+        
+        
         .see-all {
             display: inline-block;
             margin-top: 20px;
@@ -171,23 +244,7 @@
 
 
 
-        .name {
-            text-align: right; 
-            font-family: Verdana (sans-serif); 
-            margin-top: 20px; 
-            padding: 0px 10px;
-        }
-        
-        .name h2 {
-            font-size: 25px; 
-            font-weight:lighter;
-            margin-bottom: 1px; 
-        }
-        
-        .name p {
-            font-size:11px;
-            color: #C3A887; 
-        }
+
 
 
 
@@ -195,11 +252,12 @@
         /* experience */
         .experience-section {
             font-family: 'Trebuchet MS', sans-serif;
-
             display: flex;
             margin-top: 80px;
-            padding: 10px;
+            
         }
+
+        
         
         .experience-container {
             width: 40%;
@@ -207,9 +265,18 @@
             backdrop-filter: blur(10px); 
             color: #C3A887; 
             padding: 20px;
+            margin-left: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(72, 61, 61, 0.5);
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
         }
+
+        .experience-container:hover,
+        .experience-container:active {
+            transform: scale(1.1); /* Slightly enlarge */
+            box-shadow: 0px 4px 10px rgba(43, 37, 37, 0.2);
+            z-index: 10; /* Bring forward */}
         
         .experience-container h2 {
             text-align: center;
@@ -252,10 +319,47 @@
             margin-bottom: 10px;
         }
 
-       
+
+
+
+        .text-container {
+            width: 40%;
+            color: #C3A887;
+            font-size: 44px;
+            font-family: 'Trebuchet MS', sans-serif;
+            text-align: left;
+            margin-left: 600px;
+            margin-top: 100px;
+        }
+        
+        #animated-text {
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid transparent;
+            display: inline-block;
+            font-family: "Sofia", sans-serif;
+            font-size: 40px;
+            color: #a0815b;
+            text-shadow: 3px 3px 3px #524040;
+        }
+        
+        #animated-image {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            border-radius: 90%;
+            margin-left: 200px;
+            display: none;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+     
 
 
        
+
+
 
 
 
@@ -278,7 +382,15 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(72, 61, 61, 0.5);
-}
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+        }
+
+    .education-container:hover,
+    .education-container:active {
+        transform: scale(1.1); /* Slightly enlarge */
+        box-shadow: 0px 4px 10px rgba(43, 37, 37, 0.2);
+        z-index: 10; /* Bring forward */}
 
 .education-container h2 {
     text-align: center;
@@ -385,62 +497,212 @@
 
 
         /* contact section */
-        .contact-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .contact-section h2 {
-            font-size: 72px;
-            font-weight: 500px;
-            font-style:oblique;
-            margin-top: 0px;
-        }
-        .contact-section .shine  {
-            font-style: italic;
-            font-size: 62px;
-            font-weight: 200;
-            margin-top: 0px;
-        }
-        .contact-section p {
-            margin-top: 10px;
-            font-size: 18px;
-            color: #c3b091;
-        }
-        .contact-buttons {
-            margin-top: 20px;
-        }
-        .contact-buttons a {
-            text-decoration: none;
-            padding: 12px 24px;
-            background-color: #c3b091;
-            color: #121212;
-            font-size: 16px;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .contact-buttons a:hover {
-            background-color: #a28d68;
-        }
-        .social-icons {
-            margin-top: 20px;
-            display: flex;
-            gap: 15px;
-        }
-        .social-icons a {
-            color: #c3b091;
-            font-size: 20px;
-            transition: 0.3s;
-        }
-        .social-icons a:hover {
-            color: #fff;
-        }
+       /* Existing Contact Section Styles */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 50px;
+}
 
-        
+.contact-section h4{
+    color: #c3b091;
 
-        
+}
 
-     
+
+.contact-section h2 {
+    font-size: 62px;
+    font-weight: 500px;
+    font-style: oblique;
+    margin-top: 0px;
+    color: #c3b091;
+    margin-top: 90px;
+  
+
+}
+
+.contact-section .shine {
+    font-style: italic;
+    font-size: 82px;
+    font-weight: 200;
+    margin-top: 0px;
+}
+
+.contact-section p {
+    margin-top: 70px;
+    font-size: 18px;
+    color: #c3b091;
+}
+.star {
+    font-size: 50%; 
+}
+
+
+/* Contact Buttons */
+.contact-buttons {
+    margin-top: 20px;
+}
+
+.contact-buttons #get-in-touch-btn {
+    cursor:pointer;
+    padding: 12px 24px;
+    background-color: #a18c6c;
+    color: #1b1919;
+    font-size: 16px;
+    border-radius: 22px;
+    transition: 0.2s;
+}
+
+.contact-buttons #get-in-touch-btn:hover {
+    background-color: #6c5b3e;
+}
+
+/* Initially hide the contact details */
+.contact-details {
+    display: none;
+    width: 500px;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: rgba(27, 26, 26, 0.1);
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px rgba(245, 140, 140, 0.2);
+}
+
+.contact-details h3 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 90px;
+}
+
+.contact-details p {
+    font-size: 16px;
+    color: #c3b091;
+    margin-top: 40px;
+}
+
+.contact-details a {
+    color: #c3b091;
     
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* Modal container - initially hidden */
+.modal {
+    display: none; /* Hide modal initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    backdrop-filter: blur(2px);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it's in front */
+}
+
+/* Modal content style */
+.modal-content {
+    background-color: #1e1c1c;
+    padding: 30px;
+    color: #e3d3be;
+    border-radius: 40px;
+    width: 500px;
+    text-align: center;
+    
+}
+
+.modal-content h3 {
+    font-size: 44px;
+    
+}
+
+.modal-content .herehow {
+    font-size: 24px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    color: #e3d3be;
+
+}
+
+.modal-content p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #a18c6c;
+    color: #1b1919;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.modal-content button:hover {
+    background-color: #6c5b3e;
+}
+
+/* Email Link Styling */
+.email-link {
+    font-size: 18px;
+    color: #c3b091;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    /* position: relative; */
+}
+
+/* On Hover or Touch */
+.email-link:hover,
+.email-link:active {
+    color: #a18c6c;
+    transform: scale(1.1); /* Slightly enlarge */
+    box-shadow: 0px 4px 10px rgba(43, 37, 37, 0.2);
+    z-index: 10; /* Bring forward */
+}
+
+
+
+
+
+
+
+
+
+.strip-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #1d1717;
+    padding: 8px 0;
+    position: relative;
+    margin-top: 100px;
+}
+.scrolling-text {
+    display: inline-block;
+    color: #C3A887; 
+    font-family: "Sofia", sans-serif;
+    font-size: 24px;
+    animation: scroll 5s linear infinite;
+}
+@keyframes scroll {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
