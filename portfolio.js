@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 200);
 
     const revealTargets = document.querySelectorAll(
-        ".title-reveal, .project-card, .skill-category, .edu-card, .extra-card, .about-text, .about-education, .contact-inner, .strength-tag"
+        ".title-reveal, .project-card, .skill-category, .skills-section-label, .edu-card, .extra-card, .about-text, .about-education, .contact-inner, .strength-tag"
     );
     revealTargets.forEach((el) => {
         if (!el.classList.contains("title-reveal")) el.classList.add("fade-up");
