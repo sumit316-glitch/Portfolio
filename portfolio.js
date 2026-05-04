@@ -97,6 +97,13 @@ document.addEventListener("DOMContentLoaded", () => {
         navbar.classList.toggle("scrolled", window.scrollY > 50);
     });
 
+    const navCtaBtn = document.getElementById("navCtaBtn");
+    if (navCtaBtn) {
+        navCtaBtn.addEventListener("click", () => {
+            document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+        });
+    }
+
     // ══════════════════════════════════════════
     //  ACTIVE NAV LINK
     // ══════════════════════════════════════════
