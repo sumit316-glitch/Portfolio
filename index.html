@@ -3,243 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumit's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
-
+    <title>Sumit Yadav — Full Stack Developer</title>
+    <meta name="description" content="Full Stack Software Developer skilled in MERN stack, TypeScript, and ML. Building impactful products with clean code and scalable architecture.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="portfolio.css">
-    
 </head>
 <body>
+    <canvas id="particleCanvas"></canvas>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
     <header>
-        <nav>
-            <ul class="hey">
-                <!-- Left: Name Section -->
-                <div class="name">
-                    <h2>Sumit Yadav</h2>
-                    <p>Web Developer | Designer |</p>
-                </div>
-    
-                <!-- Center: Logo -->
-                <li class="logo-container">
-                    <img class="logo" src="img/image (1).jpg" alt="Logo">
-                </li>
-    
-                <!-- Right: Navigation Links -->
-                <div class="nav-links">
-                    <li><a href="#csguy">MAIN</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#work">SKILLS</a></li>
-                    <li><a href="#contact">LET'S TALK</a></li>
-                </div>
+        <nav class="navbar" id="navbar">
+            <a href="#" class="nav-brand">S.</a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Let's Talk</button>
         </nav>
     </header>
 
-    <section id="csguy">
-        <img class ="csguylogo" src="img/PHOTO-2025-02-12-21-50-44.jpg">
-    </section>
-
-    <section>
-        <div >
-            <h1 class ="webheading">Web  Designer</h1>
-            <h1 class ="webheadingg">& Developer</h1>
-        </div>
-    </section>
-
-
-
-    <section id="info" >
-        <div class="hero">
-            <h1>Hello.I am Sumit.</h1>
-            <p>I am a dedicated B.Tech Computer Science student with a strong passion for programming and web development. I have hands-on experience building projects using the latest technologies and constantly strive to learn and explore new advancements in the field.</p>
-        </div></section>
-
-
-
-        <section>
-            <div class="skills">
-                <div class="skill-logo">
-                <h1 >My Skills</h1>
-                <img class ="killlogo" src="img/image.jpg">
+    <main>
+        <!-- Hero -->
+        <section id="hero" class="hero">
+            <div class="hero-badge reveal">FULL STACK DEVELOPER</div>
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h1 class="hero-title">
+                        <span class="line reveal">Hi, I'm</span>
+                        <span class="line highlight reveal" style="--delay:0.15s">Sumit Yadav</span>
+                    </h1>
+                    <p class="hero-desc reveal" style="--delay:0.3s">Full Stack Software Developer with hands-on experience building scalable web applications using the MERN stack &amp; TypeScript. I focus on clean code, solid architecture, and shipping products that work.</p>
+                    <div class="hero-stats reveal" style="--delay:0.45s">
+                        <div class="stat">
+                            <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Projects Shipped</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="8">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Live Deployments</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions reveal" style="--delay:0.6s">
+                        <a href="#projects" class="btn-primary">View Projects</a>
+                        <a href="#contact" class="btn-outline">Get in Touch</a>
+                    </div>
+                    <div class="hero-links reveal" style="--delay:0.7s">
+                        <a href="https://linkedin.com" target="_blank" class="social-link">LinkedIn</a>
+                        <a href="https://github.com/sumit316-glitch" target="_blank" class="social-link">GitHub</a>
+                        <a href="https://codechef.com" target="_blank" class="social-link">CodeChef</a>
+                        <a href="https://leetcode.com" target="_blank" class="social-link">LeetCode</a>
+                    </div>
                 </div>
-                <div class="skills-container">
-                    <h3>HTML</h3>
-                    <h3>CSS</h3>
-                    <h3>Python</h3>
-                    <h3>JavaScript</h3>
-                    
+                <div class="hero-right reveal" style="--delay:0.4s">
+                    <div class="hero-image-wrapper">
+                        <img src="img/PHOTO-2025-02-12-21-50-44.jpg" alt="Sumit Yadav" class="hero-image">
+                        <div class="hero-image-ring"></div>
+                        <div class="hero-image-ring ring-2"></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-
-
-
-        <section class="experience-section"id="about">
-            <div class="experience-container">
-                <h2>Experience</h2>
-        
-                <div class="experience-card">
-                    <h3>Backend Developer</h3>
-                    <p class="exp-duration">University | April 2024 - Dec 2028</p>
-                    <div class="skills-background">
-                        <ul>
-                            <li>Developed and optimized backend features using Python.</li>
-                        </ul>
-                    </div>
-                </div>
-        
-                <div class="experience-card">
-                    <h3>Web Developer</h3>
-                    <p class="exp-duration">University | April 2024 - Dec 2028</p>
-                    <div class="skills-background">
-                        <ul>
-                            <li>Designed and developed responsive websites using HTML, CSS, and JavaScript.</li>
-                            <li>Worked on UI/UX improvements to enhance user experience.</li>
-                            <li>Integrated front-end components with backend services.</li>
-                        </ul>
-                    </div>
-                </div>
+        <!-- About -->
+        <section id="about" class="about">
+            <div class="section-header">
+                <span class="section-tag">01</span>
+                <h2 class="section-title title-reveal">About Me</h2>
             </div>
-            <!-- right side tex word by word -->
-
-            <div class="text-container">
-                <p id="animated-text"></p>
-                <img id="animated-image" src="img/robot.jpg" alt="Robotics Enthusiast" style="display: none;">
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I'm a B.Tech Computer Science student at <strong>Rishihood University × Newton School of Technology</strong> (2024–2028). I build full-stack web applications, design responsive UIs, develop RESTful APIs, and have experience deploying ML models to production.</p>
+                    <p>I'm driven by solving real problems through code — whether it's a real-time chat platform, a disease prediction pipeline, or a property listing app. I write clean, maintainable code and ship fast.</p>
+                    <div class="about-strengths">
+                        <span class="strength-tag">Full Stack Development</span>
+                        <span class="strength-tag">RESTful APIs</span>
+                        <span class="strength-tag">Database Design</span>
+                        <span class="strength-tag">ML Deployment</span>
+                        <span class="strength-tag">Responsive UI/UX</span>
+                        <span class="strength-tag">Version Control</span>
+                    </div>
+                </div>
+                <div class="about-education">
+                    <h3 class="subsection-title">Education</h3>
+                    <div class="edu-card">
+                        <div class="edu-year">2024 — 2028</div>
+                        <h4>B.Tech Computer Science</h4>
+                        <p>Rishihood University × Newton School of Technology</p>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-year">2021 — 2022</div>
+                        <h4>Intermediate (Class XII)</h4>
+                        <p>Children College, Azamgarh</p>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-year">2020 — 2021</div>
+                        <h4>Matriculation (Class X)</h4>
+                        <p>Children College, Azamgarh</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-
-        <section class="education-section">
-            <div class="education-container">
-                <h2>Education</h2>
-        
-                <div class="education-card">
-                    <h3>Bachelor of Technology (B.Tech)</h3>
-                    <p class="edu-duration">NST University | 2024 - 2028</p>
-                    <div class="education-details">
-                        <ul>
-                            <li>Specialization: Computer Science & Engineering</li>
-                            <li>Focus Area: AI and ML</li>
-                            <li>Current Academic Performance: na</li>
-                        </ul>
-                    </div>
-                </div> 
+        <!-- Projects -->
+        <section id="projects" class="projects">
+            <div class="section-header">
+                <span class="section-tag">02</span>
+                <h2 class="section-title title-reveal">Featured Projects</h2>
             </div>
-            
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-meta">
+                        <span class="project-date">April 2025</span>
+                        <div class="project-links">
+                            <a href="https://github.com/sumit316-glitch/chatspeherenew.git" target="_blank" class="project-link">GitHub ↗</a>
+                            <a href="https://chatspeherenew.vercel.app/login" target="_blank" class="project-link">Live Demo ↗</a>
+                        </div>
+                    </div>
+                    <h3>ChatSphere</h3>
+                    <p class="project-subtitle">Real-Time Messaging Platform</p>
+                    <p>Architected a scalable real-time chat application using the MERN stack with TypeScript. Features include JWT-based authentication, persistent chat history, online/offline user status via Socket.io, and a fully responsive UI.</p>
+                    <div class="project-tech">
+                        <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>TypeScript</span><span>Socket.io</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-meta">
+                        <span class="project-date">2025</span>
+                        <div class="project-links">
+                            <a href="https://github.com/Harsh-raj-08/gen-ai-patient-risk-management.git" target="_blank" class="project-link">GitHub ↗</a>
+                            <a href="https://paitent-risk-management.streamlit.app/" target="_blank" class="project-link">Live Demo ↗</a>
+                        </div>
+                    </div>
+                    <h3>CardioCare</h3>
+                    <p class="project-subtitle">Cardiovascular Disease Prediction System</p>
+                    <p>End-to-end ML pipeline for cardiovascular disease risk prediction. Trained a Logistic Regression model, evaluated with F1 score &amp; ROC-AUC metrics, and deployed to Streamlit Cloud for public access.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>Streamlit</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-meta">
+                        <span class="project-date">2025</span>
+                        <div class="project-links">
+                            <a href="https://github.com/sumit316-glitch/Estate-Ease.git" target="_blank" class="project-link">GitHub ↗</a>
+                        </div>
+                    </div>
+                    <h3>Estate Ease</h3>
+                    <p class="project-subtitle">Real Estate Web Application</p>
+                    <p>A modern real estate platform to simplify finding, listing, and exploring properties — featuring search filters, detailed property pages, and a fully responsive interface.</p>
+                    <div class="project-tech">
+                        <span>React</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-
-
-
-
-    <!-- <section>
-        <h2 class ="servicesss">MY SERVICES</h2>
-        <div class="service">
-            <h3>WEB DESIGN</h3>
-            <p>Visually stunning web designs that captivate your audience by blending your brand voice and customer needs.</p>
-        </div>
-
-
-        <div class="service">
-            <h3> DEVELOPMENT</h3>
-            <p>Get custom web development solutions that are tailored to your specifications, designed to deliver a flawless user experience.</p>
-        </div>
-    </section> -->
-
-
-  
-
-
-
-    <section id="work">
-        <h2>MY EXPERTISE ♨︎</h2>
-        <div class="work-grid">
-
-
-
-            <div class="work-item">
-                <div class="expertise-header">
-                    <h3>Technical Skills</h3>
-                    <img class="techpic" src="img/technicalskills.jpg" alt="Technical Skills">
-                </div>
-                <p>I have a strong foundation in web development, proficient in HTML, CSS, and JavaScript for creating dynamic and responsive websites. Additionally, I have experience with Python and a solid grasp of data structures and algorithms to solve complex problems efficiently.</p>
+        <!-- Skills -->
+        <section id="skills" class="skills">
+            <div class="section-header">
+                <span class="section-tag">03</span>
+                <h2 class="section-title title-reveal">Tech Stack</h2>
             </div>
-
-
-            <div class="work-item">
-            <div class="expertise-header">
-                <h3>Problem-Solving</h3>
-                <img class="techpic" src="img/problem-solving.jpg" alt="Technical Skills">
-            </div>
-            <p>I thrive on tackling complex challenges by breaking them into manageable components. Whether debugging code, optimizing algorithms, or crafting creative solutions, I approach every problem methodically and with a keen eye for detail. My passion for problem-solving drives me to continuously learn new techniques and refine my approach.</p>
-            </div>
-
-
-            <div class="work-item">
-                <div class="expertise-header">
-                    <h3>Version Control</h3>
-                    <img class="techpic" src="img/github.jpg" alt="Technical Skills">
-                </div>
-                <p>Proficient in Git and GitHub, I leverage version control to keep my projects well-organized and maintainable. Whether managing personal projects or collaborating on team-based applications, I ensure efficient tracking of changes, seamless conflict resolution, and smooth collaboration.
-                </p>
-                </div>
-
-
-                <div class="work-item">
-                    <div class="expertise-header">
-                        <h3>Soft Skills</h3>
-                        <img class="techpic" src="img/softskills.jpg" alt="Technical Skills">
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <div class="skill-tags">
+                        <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span>
                     </div>
-                    <p>I work well in a team, adapting quickly to new challenges and contributing effectively to group success. I have a strong understanding of social media and manage a 90k-follower Instagram account, creating engaging content and growing an online community.
-                    </p>
-
+                </div>
+                <div class="skill-category">
+                    <h4>Frontend</h4>
+                    <div class="skill-tags">
+                        <span>HTML</span><span>CSS</span><span>React</span><span>Tailwind CSS</span>
                     </div>
-        </div>
-
-
-        <!-- <a href="#" class="see-all">SEE ALL</a>
-    </section> -->
-
-
-    <!-- contact me section -->
-
-    <div class="strip-container">
-        <div class="scrolling-text">Contact</div>
-    </div>
-
-    <section class="contact-section" id="contact">
-        <h4 class="mind">ANY PROJECT IN MIND?</h4>
-        <div class="contact-buttons">
-            <!-- Get in Touch button -->
-            <button id="get-in-touch-btn">Get in Touch ↙</button>
-        </div>
-
-        <h2 class="make">Let's make your</h2>
-
-        <h3 class="shine">Website shine
-            <span class="star">✧</span> 
-        </h3>
-        <p>Premium web design, development to help your website stand out.</p>
-        
-
-
-        
-    
-        <!-- Contact details section -->
-        <div id="contact-modal" class="modal">
-            <div class="modal-content">
-                <h3>Contact Details</h3>
-                <p class="herehow">Here's how you can get in touch:</p>
-                <a href="#email" class="email-link">Email: sumit..yadav2024@nst.edu.in</a>
-                <p>Phone: +91 857783676</p>
-                <button id="close-modal-btn">Close</button>
+                </div>
+                <div class="skill-category">
+                    <h4>Backend</h4>
+                    <div class="skill-tags">
+                        <span>Node.js</span><span>Express.js</span><span>RESTful APIs</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases</h4>
+                    <div class="skill-tags">
+                        <span>MongoDB</span><span>MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools &amp; Platforms</h4>
+                    <div class="skill-tags">
+                        <span>Git</span><span>GitHub</span><span>VS Code</span><span>Postman</span><span>Vercel</span><span>Render</span><span>Netlify</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Libraries</h4>
+                    <div class="skill-tags">
+                        <span>Socket.io</span><span>JWT</span><span>Bcrypt</span><span>Pandas</span><span>NumPy</span><span>React Router</span>
+                    </div>
+                </div>
             </div>
-    </section>
+        </section>
 
-    <script src="portfolio.js"></script>   
+        <!-- Extra-Curricular -->
+        <section id="extras" class="extras">
+            <div class="section-header">
+                <span class="section-tag">04</span>
+                <h2 class="section-title title-reveal">Beyond Code</h2>
+            </div>
+            <div class="extras-grid">
+                <div class="extra-card">
+                    <div class="extra-icon">⚡</div>
+                    <h3>Core Committee — Newton Fest</h3>
+                    <p>Organized and managed logistics, event coordination, and on-ground execution for Newton Fest at NST — driving cross-functional team collaboration under tight deadlines.</p>
+                </div>
+                <div class="extra-card">
+                    <div class="extra-icon">⚙️</div>
+                    <h3>Robotics Club — NST</h3>
+                    <p>Member of the Robotics Club at Newton School of Technology. Participated in hands-on workshops, competitions, and collaborative builds at the intersection of hardware and software.</p>
+                </div>
+                <div class="extra-card">
+                    <div class="extra-icon">📊</div>
+                    <h3>Social Media &amp; Marketing</h3>
+                    <p>Built and manage a 90K-follower Instagram community. Led marketing for a college fest — designed creatives, managed campaigns, and drove 400+ registrations with 40% YoY growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact">
+            <div class="contact-inner">
+                <span class="section-tag">05</span>
+                <h2 class="contact-title title-reveal">Let's Build<br><em>Something Great</em></h2>
+                <p class="contact-desc">Have a project in mind or looking for a developer? Let's connect.</p>
+                <div class="contact-info">
+                    <a href="mailto:sumit.yadav2024@nst.rishihood.edu.in" class="contact-item">sumit.yadav2024@nst.rishihood.edu.in</a>
+                    <a href="tel:+918577836767" class="contact-item">+91 8577836767</a>
+                </div>
+                <div class="contact-socials">
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/sumit316-glitch" target="_blank">GitHub</a>
+                    <a href="https://codechef.com" target="_blank">CodeChef</a>
+                    <a href="https://leetcode.com" target="_blank">LeetCode</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sumit Yadav. Built with passion.</p>
+    </footer>
+
+    <script src="portfolio.js"></script>
 </body>
 </html>
