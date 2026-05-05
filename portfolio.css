@@ -943,16 +943,48 @@ footer {
 
 @media (max-width: 600px) {
     .hero-stats {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
         align-items: center;
+        justify-content: center;
+    }
+
+    .stat-number {
+        font-size: 32px;
+    }
+
+    .stat-plus,
+    .stat-decimal {
+        font-size: 20px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-desc {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .hero-actions .btn-primary,
+    .hero-actions .btn-outline {
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
-    }
-
-    .hero-title {
-        font-size: 40px;
     }
 }
