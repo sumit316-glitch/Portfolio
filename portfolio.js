@@ -134,16 +134,36 @@ document.addEventListener("DOMContentLoaded", () => {
     function animateCounters() {
         statNumbers.forEach((el) => {
             const target = parseInt(el.getAttribute("data-target"));
-            const duration = 2000;
+            const duration = 3000; // 3 seconds total duration
             const startTime = performance.now();
+            let lastUpdate = startTime;
+            let currentDelay = 30; // initial fast scramble speed (in ms)
 
             function tick(now) {
                 const elapsed = now - startTime;
                 const progress = Math.min(elapsed / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                el.textContent = Math.floor(eased * target);
-                if (progress < 1) requestAnimationFrame(tick);
-                else el.textContent = target;
+
+                // Update text content based on currentDelay to control speed
+                if (now - lastUpdate >= currentDelay) {
+                    if (progress < 0.6) {
+                        // First ~1.8 seconds: Fast scrambling
+                        el.textContent = Math.floor(Math.random() * 99); 
+                    } else if (progress < 1) {
+                        // Last ~1.2 seconds: Gradually slow down
+                        // Map progress (0.6 -> 1.0) to a delay (50ms -> 400ms)
+                        const slowProgress = (progress - 0.6) / 0.4;
+                        currentDelay = 50 + (Math.pow(slowProgress, 2) * 350); 
+                        el.textContent = Math.floor(Math.random() * 99);
+                    }
+                    lastUpdate = now;
+                }
+
+                if (progress < 1) {
+                    requestAnimationFrame(tick);
+                } else {
+                    // Finally, snap to the actual target value
+                    el.textContent = target;
+                }
             }
             requestAnimationFrame(tick);
         });
